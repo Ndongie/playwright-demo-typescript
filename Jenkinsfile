@@ -42,7 +42,11 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                if (isUnix()) {
+                    sh 'npm ci'
+                } else {
+                    bat 'npm ci'
+                }
             }
         }
         
