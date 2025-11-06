@@ -112,9 +112,23 @@ pipeline {
                 script {
                     // Check if report directory exists before publishing
                     if (isUnix()) {
-                        sh 'test -d playwright-report || echo "No report directory found"'
+                        sh '''
+                            if [ -d "playwright-report" ]; then
+                                echo "Playwright report directory exists"
+                                ls -la playwright-report/
+                            else
+                                echo "No playwright report directory found"
+                            fi
+                        '''
                     } else {
-                        bat 'if not exist playwright-report echo "No report directory found"'
+                        bat '''
+                            if exist playwright-report (
+                                echo "Playwright report directory exists"
+                                dir playwright-report
+                            ) else (
+                                echo "No playwright report directory found"
+                            )
+                        '''
                     }
                 }
 
@@ -128,12 +142,33 @@ pipeline {
                     reportName: 'Playwright HTML Report'
                 ])
                 
-                // Archive test results - using more inclusive patterns
-                archiveArtifacts artifacts: 'test-results/**/*', fingerprint: false
+                script {
+                    // Archive test results if they exist
+                    if (isUnix()) {
+                        sh '''
+                            if [ -d "test-results" ]; then
+                                echo "Archiving test results"
+                                find test-results/ -name "*" -type f
+                            else
+                                echo "No test-results directory found"
+                            fi
+                        '''
+                    } 
+                    else {
+                        bat '''
+                            if exist test-results (
+                                echo "Archiving test results"
+                                dir test-results /s
+                            ) else (
+                                echo "No test-results directory found"
+                            )
+                        '''
+                    }
+                }
                 
                 // Archive traces and videos for failed tests
-                archiveArtifacts artifacts: 'test-results/**/*.zip', fingerprint: false  // Broader pattern for traces
-                archiveArtifacts artifacts: 'test-results/**/*.webm', fingerprint: false  // Broader pattern for videos
+                archiveArtifacts artifacts: 'test-results/**/*', allowEmptyArchive: true, fingerprint: false
+                archiveArtifacts artifacts: 'playwright-report/**/*', allowEmptyArchive: true, fingerprint: false
             }
         }
     }
@@ -143,11 +178,36 @@ pipeline {
             // Archive test results even if build fails
             script {
                 if (isUnix()) {
-                    sh 'ls -la playwright-report/ || echo "No report generated"'
+                    sh '''
+                        echo "=== Build Artifacts Summary ==="
+                        if [ -d "playwright-report" ]; then
+                            echo "HTML Report available"
+                        else
+                            echo "No HTML report generated"
+                        fi
+                        if [ -d "test-results" ]; then
+                            echo "Test results available"
+                        else
+                            echo "No test results generated"
+                        fi
+                    '''
                 } else {
-                    bat 'dir playwright-report || echo "No report generated"'
+                    bat '''
+                        echo "=== Build Artifacts Summary ==="
+                        if exist playwright-report (
+                            echo "HTML Report available"
+                        ) else (
+                            echo "No HTML report generated"
+                        )
+                        if exist test-results (
+                            echo "Test results available"
+                        ) else (
+                            echo "No test results generated"
+                        )
+                    '''
                 }
             }
+
             // Clean up workspace
             cleanWs()
         }
@@ -161,7 +221,7 @@ pipeline {
         }
         
         unstable {
-            echo 'Build completed with unstable status'  // Fixed typo: 'completed' to 'completed'
+            echo 'Build completed with unstable status' 
         }
     }
 }
