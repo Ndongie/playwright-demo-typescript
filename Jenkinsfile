@@ -161,7 +161,8 @@ pipeline {
                     bat '''
                         echo "=== Allure Results ==="
                         if exist allure-results (
-                            dir allure-results\\*.json 2>nul | head -5
+                            echo "Allure results found:"
+                            dir allure-results\\*.json 2>nul | findstr /R /C:".*" | more +5
                         ) else (
                             echo "No allure results generated"
                         )
