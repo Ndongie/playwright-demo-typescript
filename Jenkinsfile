@@ -6,21 +6,21 @@ pipeline {
     }
 
     parameters {
-        choice {
+        choice(
             name: 'TEST_SUITE',
             choices: ['all', 'login', 'regression', 'smoke'],
-            description: 'Select the test suite'
-        }
-        choice {
+            description: 'Select the test suite to run'
+        )
+        choice (
             name: 'PROJECT',
             choices: ['chromium', 'firefox', 'webkit'],
-            description: 'Select the project corresponding to the device and browser: chromium for Desktop Chrome, firefox for Desktop Firefox, webkit for Desktop Safari'  // Fixed line break
-        }
-        booleanParam {
+            description: 'Select the project corresponding to the device and browser: chromium for Desktop Chrome, firefox for Desktop Firefox, webkit for Desktop Safari'
+        )
+        booleanParam (
             name: 'HEADLESS',
             defaultValue: false,
             description: 'Run tests in headless mode'
-        }
+        )
     }
     
     environment {
