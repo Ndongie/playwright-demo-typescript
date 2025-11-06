@@ -1,0 +1,23 @@
+{
+  "name": "playwright-demo-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "all":"npx playwright test'",
+    "login":"npx playwright test ./tests/specs/login.spec.ts",
+    "product":"npx playwright test ./tests/specs/product.spec.ts",
+    "regression":"npx playwright test --project --grep '@regression'",
+    "smoke":"npx playwright test --project --grep '@smoke'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "chalk": "^5.6.2",
+    "winston": "^3.18.3"
+  }
+}
