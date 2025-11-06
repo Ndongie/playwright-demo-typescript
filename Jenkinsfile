@@ -2,23 +2,23 @@ pipeline {
     agent any
     
     tools {
-        nodejs 'nodejs'  // Ensure Node.js is configured in Jenkins
+        nodejs 'nodejs'
     }
 
     parameters {
         choice {
-            name: 'TEST_SUITE'
-            choices: ['all', 'login', 'regression', 'smoke']  // Removed duplicate 'login'
+            name: 'TEST_SUITE',
+            choices: ['all', 'login', 'regression', 'smoke'],
             description: 'Select the test suite'
         }
         choice {
-            name: 'PROJECT'
-            choices: ['chromium', 'firefox', 'webkit']
+            name: 'PROJECT',
+            choices: ['chromium', 'firefox', 'webkit'],
             description: 'Select the project corresponding to the device and browser: chromium for Desktop Chrome, firefox for Desktop Firefox, webkit for Desktop Safari'  // Fixed line break
         }
         booleanParam {
-            name: 'HEADLESS'
-            defaultValue: false
+            name: 'HEADLESS',
+            defaultValue: false,
             description: 'Run tests in headless mode'
         }
     }
@@ -63,7 +63,7 @@ pipeline {
                     }
 
                     if (params.HEADLESS.toBoolean()) {
-                        testCommand += " --headless"  // Fixed typo: '--heeded' to '--headless'
+                        testCommand += " --headed"
                     }
 
                     echo "Executing command: ${testCommand}"
