@@ -5852,3 +5852,170 @@
 {"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with valid credentials","timestamp":"2025-11-06T14:12:37.823Z"}
 {"level":"info","message":"⏭️ @regression @smoke @authentication Login with valid credentials SKIPPED","timestamp":"2025-11-06T14:12:37.878Z"}
 {"level":"info","message":"Test suite completed","timestamp":"2025-11-06T14:12:37.976Z"}
+{"level":"info","message":"Global setup started","timestamp":"2025-11-06T19:57:01.289Z"}
+{"level":"info","message":"Reading test data....","timestamp":"2025-11-06T19:57:01.292Z"}
+{"level":"info","message":"Test data successfully read","timestamp":"2025-11-06T19:57:01.292Z"}
+{"level":"info","message":"Global setup completed","timestamp":"2025-11-06T19:57:01.293Z"}
+{"level":"info","message":"🔧 test-hooks.ts is being loaded and executed","timestamp":"2025-11-06T19:57:01.357Z"}
+{"level":"info","message":"✅ test-hooks.ts loaded successfully","timestamp":"2025-11-06T19:57:01.365Z"}
+{"level":"info","message":"Test suite started","timestamp":"2025-11-06T19:57:01.435Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with invalid username","timestamp":"2025-11-06T19:57:04.287Z"}
+{"level":"info","message":"🔧 test-hooks.ts is being loaded and executed","timestamp":"2025-11-06T19:57:04.096Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with invalid username","timestamp":"2025-11-06T19:57:04.349Z"}
+{"level":"info","message":"🔧 test-hooks.ts is being loaded and executed","timestamp":"2025-11-06T19:57:04.114Z"}
+{"level":"info","message":"✅ test-hooks.ts loaded successfully","timestamp":"2025-11-06T19:57:04.111Z"}
+{"level":"info","message":"✅ test-hooks.ts loaded successfully","timestamp":"2025-11-06T19:57:04.132Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T19:57:06.585Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T19:57:06.586Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T19:57:06.588Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T19:57:06.589Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T19:57:06.599Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T19:57:12.464Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T19:57:12.466Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T19:57:12.927Z"}
+{"level":"info","message":"Logging in user: Kamertest1testsggs","timestamp":"2025-11-06T19:57:12.966Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T19:57:12.968Z"}
+{"level":"info","message":"Alert text found:User does not exist.","timestamp":"2025-11-06T19:57:15.095Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T19:57:15.144Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T19:57:15.145Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T19:57:15.146Z"}
+{"level":"info","message":"✅ @regression @smoke @authentication Login with invalid username PASSED:  (11307ms)","timestamp":"2025-11-06T19:57:15.657Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with invalid password","timestamp":"2025-11-06T19:57:15.731Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T19:57:16.096Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T19:57:16.097Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T19:57:16.103Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T19:57:16.104Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T19:57:16.105Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T19:57:16.865Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T19:57:16.866Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T19:57:16.867Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T19:57:16.868Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T19:57:16.868Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T19:57:22.949Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T19:57:22.952Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T19:57:23.241Z"}
+{"level":"info","message":"Logging in user: Kamertest1testsggs","timestamp":"2025-11-06T19:57:23.242Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T19:57:23.243Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T19:57:24.461Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T19:57:24.463Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T19:57:24.799Z"}
+{"level":"info","message":"Logging in user: Kamertest1","timestamp":"2025-11-06T19:57:24.799Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T19:57:24.800Z"}
+{"level":"info","message":"Alert text found:User does not exist.","timestamp":"2025-11-06T19:57:25.679Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T19:57:25.752Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T19:57:25.753Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T19:57:25.753Z"}
+{"level":"info","message":"✅ @regression @smoke @authentication Login with invalid username PASSED:  (21918ms)","timestamp":"2025-11-06T19:57:26.269Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with invalid password","timestamp":"2025-11-06T19:57:26.301Z"}
+{"level":"info","message":"Alert text found:Wrong password.","timestamp":"2025-11-06T19:57:26.523Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T19:57:26.544Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T19:57:26.560Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T19:57:26.560Z"}
+{"level":"info","message":"✅ @regression @smoke @authentication Login with invalid password PASSED:  (11206ms)","timestamp":"2025-11-06T19:57:26.933Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with valid credentials","timestamp":"2025-11-06T19:57:26.975Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T19:57:27.445Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T19:57:27.445Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T19:57:27.446Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T19:57:27.446Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T19:57:27.447Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T19:57:28.044Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T19:57:28.044Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T19:57:28.046Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T19:57:28.046Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T19:57:28.047Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T19:57:32.347Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T19:57:32.348Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T19:57:32.786Z"}
+{"level":"info","message":"Logging in user: Kamertest1","timestamp":"2025-11-06T19:57:32.787Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T19:57:32.787Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T19:57:33.910Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T19:57:33.912Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T19:57:34.229Z"}
+{"level":"info","message":"Logging in user: Kamertest1","timestamp":"2025-11-06T19:57:34.230Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T19:57:34.230Z"}
+{"level":"info","message":"Alert text found:Wrong password.","timestamp":"2025-11-06T19:57:36.014Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T19:57:36.066Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T19:57:36.068Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T19:57:36.134Z"}
+{"level":"info","message":"✅ @regression @smoke @authentication Login with invalid password PASSED:  (10139ms)","timestamp":"2025-11-06T19:57:36.439Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with valid credentials","timestamp":"2025-11-06T19:57:36.470Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T19:57:38.129Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T19:57:38.129Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T19:57:38.131Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T19:57:38.131Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T19:57:38.131Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T19:57:43.518Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T19:57:43.520Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T19:57:43.854Z"}
+{"level":"info","message":"Logging in user: Kamertest1","timestamp":"2025-11-06T19:57:43.854Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T19:57:43.855Z"}
+{"level":"info","message":"No alert found: Error: NO_ALERT","timestamp":"2025-11-06T19:57:44.230Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T19:57:44.236Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T19:57:44.237Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T19:57:44.237Z"}
+{"level":"info","message":"✅ @regression @smoke @authentication Login with valid credentials PASSED:  (17827ms)","timestamp":"2025-11-06T19:57:44.817Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with invalid username","timestamp":"2025-11-06T19:57:48.117Z"}
+{"level":"info","message":"🔧 test-hooks.ts is being loaded and executed","timestamp":"2025-11-06T19:57:48.005Z"}
+{"level":"info","message":"✅ test-hooks.ts loaded successfully","timestamp":"2025-11-06T19:57:48.027Z"}
+{"level":"info","message":"❌ @regression @smoke @authentication Login with invalid username FAILED: (1331ms)","timestamp":"2025-11-06T19:57:49.447Z"}
+{"level":"info","message":"Error: Error: browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /Users/user/Library/Caches/ms-playwright/webkit-2215/pw_run.sh --inspector-pipe --headless --no-startup-window\n<launched> pid=12597\n[pid=12597][err] /Users/user/Library/Caches/ms-playwright/webkit-2215/pw_run.sh: line 7: 12603 Bus error: 10           DYLD_FRAMEWORK_PATH=\"$DYLIB_PATH\" DYLD_LIBRARY_PATH=\"$DYLIB_PATH\" \"$PLAYWRIGHT\" \"$@\"\nCall log:\n\u001b[2m  - <launching> /Users/user/Library/Caches/ms-playwright/webkit-2215/pw_run.sh --inspector-pipe --headless --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=12597\u001b[22m\n\u001b[2m  - [pid=12597][err] /Users/user/Library/Caches/ms-playwright/webkit-2215/pw_run.sh: line 7: 12603 Bus error: 10           DYLD_FRAMEWORK_PATH=\"$DYLIB_PATH\" DYLD_LIBRARY_PATH=\"$DYLIB_PATH\" \"$PLAYWRIGHT\" \"$@\"\u001b[22m\n\u001b[2m  - [pid=12597] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=12597] <kill>\u001b[22m\n\u001b[2m  - [pid=12597] <will force kill>\u001b[22m\n\u001b[2m  - [pid=12597] exception while trying to kill process: Error: kill ESRCH\u001b[22m\n\u001b[2m  - [pid=12597] <process did exit: exitCode=138, signal=null>\u001b[22m\n\u001b[2m  - [pid=12597] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=12597] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=12597] <gracefully close end>\u001b[22m\n","timestamp":"2025-11-06T19:57:49.519Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with invalid password","timestamp":"2025-11-06T19:57:49.561Z"}
+{"level":"info","message":"⏭️ @regression @smoke @authentication Login with invalid password SKIPPED","timestamp":"2025-11-06T19:57:49.642Z"}
+{"level":"info","message":"🚀 STARTED TEST: @regression @smoke @authentication Login with valid credentials","timestamp":"2025-11-06T19:57:49.663Z"}
+{"level":"info","message":"⏭️ @regression @smoke @authentication Login with valid credentials SKIPPED","timestamp":"2025-11-06T19:57:49.694Z"}
+{"level":"info","message":"No alert found: Error: NO_ALERT","timestamp":"2025-11-06T19:57:55.594Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T19:57:55.599Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T19:57:55.600Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T19:57:55.600Z"}
+{"level":"info","message":"✅ @regression @smoke @authentication Login with valid credentials PASSED:  (19534ms)","timestamp":"2025-11-06T19:57:56.005Z"}
+{"level":"info","message":"Test suite completed","timestamp":"2025-11-06T19:57:58.324Z"}
+{"level":"info","message":"Global setup started","timestamp":"2025-11-06T20:04:19.928Z"}
+{"level":"info","message":"Reading test data....","timestamp":"2025-11-06T20:04:19.930Z"}
+{"level":"info","message":"Test data successfully read","timestamp":"2025-11-06T20:04:19.931Z"}
+{"level":"info","message":"Global setup completed","timestamp":"2025-11-06T20:04:19.931Z"}
+{"level":"info","message":"🔧 test-hooks.ts is being loaded and executed","timestamp":"2025-11-06T20:04:19.997Z"}
+{"level":"info","message":"✅ test-hooks.ts loaded successfully","timestamp":"2025-11-06T20:04:20.017Z"}
+{"level":"info","message":"🔧 test-hooks.ts is being loaded and executed","timestamp":"2025-11-06T20:04:22.169Z"}
+{"level":"info","message":"✅ test-hooks.ts loaded successfully","timestamp":"2025-11-06T20:04:22.174Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T20:04:23.834Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T20:04:23.834Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T20:04:23.837Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T20:04:23.837Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T20:04:23.838Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T20:04:28.192Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T20:04:28.194Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T20:04:28.598Z"}
+{"level":"info","message":"Logging in user: Kamertest1testsggs","timestamp":"2025-11-06T20:04:28.599Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T20:04:28.599Z"}
+{"level":"info","message":"Alert text found:User does not exist.","timestamp":"2025-11-06T20:04:30.281Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T20:04:30.343Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T20:04:30.345Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T20:04:30.345Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T20:04:31.317Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T20:04:31.318Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T20:04:31.319Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T20:04:31.320Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T20:04:31.320Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T20:04:36.763Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T20:04:36.764Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T20:04:37.091Z"}
+{"level":"info","message":"Logging in user: Kamertest1","timestamp":"2025-11-06T20:04:37.091Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T20:04:37.092Z"}
+{"level":"info","message":"Alert text found:Wrong password.","timestamp":"2025-11-06T20:04:38.407Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T20:04:38.438Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T20:04:38.440Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T20:04:38.441Z"}
+{"level":"info","message":"🔄 BEFORE TEST: Running automatic setup","timestamp":"2025-11-06T20:04:39.250Z"}
+{"level":"info","message":"🚀 Test is starting with custom setup","timestamp":"2025-11-06T20:04:39.250Z"}
+{"level":"info","message":"🏠 Initializing HomePage","timestamp":"2025-11-06T20:04:39.251Z"}
+{"level":"info","message":"Homepage successfully initialized","timestamp":"2025-11-06T20:04:39.251Z"}
+{"level":"info","message":"🌐 Navigating from about:blank to base URL: https://www.demoblaze.com/","timestamp":"2025-11-06T20:04:39.252Z"}
+{"level":"info","message":"✅ Base URL navigation completed","timestamp":"2025-11-06T20:04:43.659Z"}
+{"level":"info","message":"Clicking the login menu.....","timestamp":"2025-11-06T20:04:43.660Z"}
+{"level":"info","message":"login menu successfully clicked","timestamp":"2025-11-06T20:04:43.904Z"}
+{"level":"info","message":"Logging in user: Kamertest1","timestamp":"2025-11-06T20:04:43.905Z"}
+{"level":"info","message":"Setting up dialog listener","timestamp":"2025-11-06T20:04:43.905Z"}
+{"level":"info","message":"No alert found: Error: NO_ALERT","timestamp":"2025-11-06T20:04:55.359Z"}
+{"level":"info","message":"✅ HomePage fixture completed","timestamp":"2025-11-06T20:04:55.364Z"}
+{"level":"info","message":"🏁 AFTER TEST: Running automatic cleanup","timestamp":"2025-11-06T20:04:55.367Z"}
+{"level":"info","message":"✅ Test completed with cleanup","timestamp":"2025-11-06T20:04:55.367Z"}

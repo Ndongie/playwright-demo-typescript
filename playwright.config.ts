@@ -20,7 +20,7 @@ export default defineConfig({
    // Enable to see which files are matched
    reporter: [
     ['list'],
-    ['html'],
+    ['allure-playwright'],
     ['./utils/listener.ts'] // Your custom reporter
   ],
    /* PGloba test timeout */
