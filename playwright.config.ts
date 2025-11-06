@@ -19,7 +19,8 @@ export default defineConfig({
   globalTeardown: require.resolve('./global-teardown.ts'),
    // Enable to see which files are matched
    reporter: [
-    ['list', 'html'], // Keep the default list reporter
+    ['list'],
+    ['html'],
     ['./utils/listener.ts'] // Your custom reporter
   ],
    /* PGloba test timeout */
