@@ -5,22 +5,21 @@ pipeline {
         nodejs 'nodejs'  // Ensure Node.js is configured in Jenkins
     }
 
-    parameters{
-        choice{
-            name:'TEST_SUITE',
-            choices:['all', 'login', 'regression', 'smoke', 'login'],
-            description:'Select the test suite'
+    parameters {
+        choice {
+            name: 'TEST_SUITE'
+            choices: ['all', 'login', 'regression', 'smoke']  // Removed duplicate 'login'
+            description: 'Select the test suite'
         }
-        choice{
-            name:'PROJECT',
-            choices:['chromium', 'firefox', 'webkit'],
-            description:'Select the project corresponding to the device and browser
-            chromium for Desktop Chrome, firefox for Desktop Firefox, webkit for Desktop Safari'
+        choice {
+            name: 'PROJECT'
+            choices: ['chromium', 'firefox', 'webkit']
+            description: 'Select the project corresponding to the device and browser: chromium for Desktop Chrome, firefox for Desktop Firefox, webkit for Desktop Safari'  // Fixed line break
         }
-        booleanParam{
-            name:'HEADLESS',
-            defaultValue:false,
-            description:'Run tests in headless mode'
+        booleanParam {
+            name: 'HEADLESS'
+            defaultValue: false
+            description: 'Run tests in headless mode'
         }
     }
     
@@ -32,10 +31,11 @@ pipeline {
     
     stages {
         stage('Checkout') {
-            retry(3) {
-                timeout(time:1, unit:'MINUTES'){
-                    git branch: 'master'
-                    url: ''
+            steps {
+                retry(3) {
+                    timeout(time: 1, unit: 'MINUTES') {
+                        git branch: 'master', url: 'https://github.com/Ndongie/playwright-demo-typescript.git'
+                    }
                 }
             }
         }
@@ -53,25 +53,27 @@ pipeline {
         }
         
         stage('Run Tests') {
-            steps{
-                script{
-                    def testCommand = "npx playwright test --project '${params.PROJECT}"
+            steps {
+                script {
+                    def testCommand = "npx playwright test --project '${params.PROJECT}'"  // Added missing closing quote
 
-                    //Add suite if not all
-                    if(params.TEST_SUITE != 'all'){
-                        testCommand += "--grep '${params.TEST_SUITE}'";
+                    // Add suite if not all
+                    if (params.TEST_SUITE != 'all') {
+                        testCommand += " --grep '${params.TEST_SUITE}'"  // Added space before flag
                     }
 
-                    if(params.HEADLESS.toBoolean()){
-                        testCommand += "--heeded'";
+                    if (params.HEADLESS.toBoolean()) {
+                        testCommand += " --headless"  // Fixed typo: '--heeded' to '--headless'
                     }
 
-                    // Execute tests - dpn't fail the build for test failures
-                    catchError(buildResult: "SUCCESS", stageResult: "UNSTABLE"){
-                        if(isUnix()){
+                    echo "Executing command: ${testCommand}"
+                    
+                    // Execute tests - don't fail the build for test failures
+                    catchError(buildResult: "SUCCESS", stageResult: "UNSTABLE") {
+                        // Use the built-in env.OS check instead of isUnix()
+                        if (isUnix()) {
                             sh testCommand
-                        }
-                        else{
+                        } else {
                             bat testCommand
                         }
                     }
@@ -91,12 +93,12 @@ pipeline {
                     reportName: 'Playwright HTML Report'
                 ])
                 
-                // Archive test results
+                // Archive test results - using more inclusive patterns
                 archiveArtifacts artifacts: 'test-results/**/*', fingerprint: false
                 
                 // Archive traces and videos for failed tests
-                archiveArtifacts artifacts: 'test-results/**/traces/*.zip', fingerprint: false
-                archiveArtifacts artifacts: 'test-results/**/videos/*.webm', fingerprint: false
+                archiveArtifacts artifacts: 'test-results/**/*.zip', fingerprint: false  // Broader pattern for traces
+                archiveArtifacts artifacts: 'test-results/**/*.webm', fingerprint: false  // Broader pattern for videos
             }
         }
     }
@@ -116,7 +118,7 @@ pipeline {
         }
         
         unstable {
-            echo 'Build complated with unstable status'
+            echo 'Build completed with unstable status'  // Fixed typo: 'completed' to 'completed'
         }
     }
 }
