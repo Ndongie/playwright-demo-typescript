@@ -28,13 +28,28 @@ pipeline {
         BASE_URL = 'https://www.demoblaze.com/'
         PLAYWRIGHT_HTML_REPORT = 'playwright-report/'
     }
-    
+
     stages {
+        stage('Verify Environment') {
+            steps {
+                script {
+                    // Verify Node.js is available
+                    if (isUnix()) {
+                        sh "node --version"
+                        sh "npm --version"
+                    } else {
+                        bat "node --version"
+                        bat "npm --version"
+                    }
+                }
+            }
+        }
+
         stage('Checkout') {
             steps {
                 retry(3) {
                     timeout(time: 1, unit: 'MINUTES') {
-                        git branch: 'master', url: 'https://github.com/Ndongie/playwright-demo-typescript.git'
+                        checkout scm
                     }
                 }
             }
@@ -42,28 +57,36 @@ pipeline {
         
         stage('Install Dependencies') {
             steps {
-                if (isUnix()) {
-                    sh 'npm ci'
-                } else {
-                    bat 'npm ci'
+                script{
+                     if (isUnix()) {
+                        sh "npm ci"
+                    } else {
+                        bat "npm ci"
+                    }
                 }
             }
         }
         
         stage('Install Playwright Browsers') {
             steps {
-                sh 'npx playwright install --with-deps'
+                script{
+                    if (isUnix()) {
+                        sh "npx playwright install --with-deps"
+                    } else {
+                        bat "npx playwright install --with-deps"
+                    }
+                }
             }
         }
         
         stage('Run Tests') {
             steps {
                 script {
-                    def testCommand = "npx playwright test --project '${params.PROJECT}'"  // Added missing closing quote
+                    def testCommand = "npx playwright test --project \"${params.PROJECT}\""
 
                     // Add suite if not all
                     if (params.TEST_SUITE != 'all') {
-                        testCommand += " --grep '${params.TEST_SUITE}'"  // Added space before flag
+                        testCommand += " --grep \"${params.TEST_SUITE}\""
                     }
 
                     if (params.HEADLESS.toBoolean()) {
@@ -74,7 +97,6 @@ pipeline {
                     
                     // Execute tests - don't fail the build for test failures
                     catchError(buildResult: "SUCCESS", stageResult: "UNSTABLE") {
-                        // Use the built-in env.OS check instead of isUnix()
                         if (isUnix()) {
                             sh testCommand
                         } else {
@@ -87,9 +109,18 @@ pipeline {
         
         stage('Publish Reports') {
             steps {
+                script {
+                    // Check if report directory exists before publishing
+                    if (isUnix()) {
+                        sh 'test -d playwright-report || echo "No report directory found"'
+                    } else {
+                        bat 'if not exist playwright-report echo "No report directory found"'
+                    }
+                }
+
                 // Publish HTML reports
                 publishHTML([
-                    allowMissing: false,
+                    allowMissing: true,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
                     reportDir: 'playwright-report',
@@ -109,6 +140,14 @@ pipeline {
     
     post {
         always {
+            // Archive test results even if build fails
+            script {
+                if (isUnix()) {
+                    sh 'ls -la playwright-report/ || echo "No report generated"'
+                } else {
+                    bat 'dir playwright-report || echo "No report generated"'
+                }
+            }
             // Clean up workspace
             cleanWs()
         }
