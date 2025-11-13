@@ -11,7 +11,7 @@ A robust test automation framework built with Playwright and TypeScript for test
 7. Environment Configuration: Flexible setup for different environments
 
 ## 📋 Prerequisites
-- Node.js 16 or higher
+- Node.js 20
 - npm
 
 ## 🛠️ Installation
