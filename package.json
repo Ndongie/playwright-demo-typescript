@@ -7,8 +7,8 @@
     "all": "npx playwright test'",
     "login": "npx playwright test ./tests/specs/login.spec.ts --project chromium --reporter=allure-playwright",
     "product": "npx playwright test ./tests/specs/product.spec.ts",
-    "regression": "npx playwright test --grep '@regression'",
-    "smoke": "npx playwright test --grep '@smoke'"
+    "regression": "npx playwright test --grep @regression",
+    "smoke": "npx playwright test --grep @smoke"
   },
   "keywords": [],
   "author": "",
